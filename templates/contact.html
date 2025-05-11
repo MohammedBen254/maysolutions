@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+    <!-- Page Header -->
+    <section class="page-header py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="fw-bold display-5">Contact MAY Solutions</h1>
+                    <p class="lead">Have questions or ready to start your project? Get in touch with our team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4 p-lg-5">
+                            <h2 class="h3 fw-bold mb-4">Send Us a Message</h2>
+                            <form action="{{ url_for('send_email') }}" method="POST">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <input type="text" class="form-control" id="subject">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary px-4 py-2">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4 p-lg-5">
+                            <h2 class="h3 fw-bold mb-4">Contact Information</h2>
+                            <div class="d-flex mb-4">
+                                <div class="icon-box bg-primary-light me-3">
+                                    <i class="fas fa-map-marker-alt text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="h6 mb-1">Address</h5>
+                                    <p class="mb-0">Morocco</p>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-4">
+                                <div class="icon-box bg-primary-light me-3">
+                                    <i class="fas fa-phone text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="h6 mb-1">Phone</h5>
+                                    <!-- <p class="mb-0">+212 691-646-805</p> -->
+                                    <a href="tel:+212691646805" class="mb-0">+212 691-646-805</a>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-4">
+                                <div class="icon-box bg-primary-light me-3">
+                                    <i class="fas fa-envelope text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="h6 mb-1">Email</h5>
+                                    <a href="mailto:"></a>
+                                    <a href="mailto:maysolution25@gmail.com" class="mb-0">maysolution25@gmail.com</a>
+                                </div>
+                            </div>
+                            <hr class="my-4">
+                            <h5 class="h6 mb-3">Follow Us</h5>
+                            <div class="social-icons">
+                                <a href="#" class="btn btn-outline-primary btn-sm rounded-circle me-2"><i class="fab fa-twitter"></i></a>
+                                <a href="#" class="btn btn-outline-primary btn-sm rounded-circle me-2"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="btn btn-outline-primary btn-sm rounded-circle me-2"><i class="fab fa-github"></i></a>
+                                <a href="#" class="btn btn-outline-primary btn-sm rounded-circle me-2"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

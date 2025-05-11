@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block title %}Our Projects{% endblock %}
+
+{% block content %}
+    <!-- Page Header -->
+    <section class="page-header py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="fw-bold display-5">Our Projects</h1>
+                    <p class="lead">Explore some of our recent work across various industries and technologies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                {% for project in projects %}
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-box bg-primary-light me-3">
+                                    <i class="fas fa-{{ 'laptop-code' if loop.index == 1 else 'database' if loop.index == 2 else 'robot' if loop.index == 3 else 'comment-dots' if loop.index == 4 else 'calendar-check' if loop.index == 5 else 'boxes' if loop.index == 6 else 'file-alt' if loop.index == 7 else 'file-invoice-dollar' if loop.index == 8 else 'map-marked-alt' if loop.index == 9 else 'hashtag' if loop.index == 10 else 'calendar-alt' if loop.index == 11 else 'chart-pie' }} text-primary"></i>
+                                </div>
+                                <h3 class="h5 mb-0">{{ project.title }}</h3>
+                            </div>
+                            <p>{{ project.description }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Client Success Stories</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 testimonial-card">
+                            <p class="mb-4"><i class="fas fa-quote-left text-primary me-2"></i> MAY Solutions transformed our data analysis process. What used to take weeks now takes hours, and the insights are far more valuable.</p>
+                            <div class="d-flex align-items-center">
+                                <div class="icon-box bg-primary-light me-3">
+                                    <i class="fas fa-user-tie text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">Healthcare Startup CEO</h5>
+                                    <small class="text-muted">Healthcare Industry</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 testimonial-card">
+                            <p class="mb-4"><i class="fas fa-quote-left text-primary me-2"></i> The custom analytics dashboard MAY Solutions built for us revealed customer patterns we never would have discovered on our own.</p>
+                            <div class="d-flex align-items-center">
+                                <div class="icon-box bg-primary-light me-3">
+                                    <i class="fas fa-user-tie text-primary"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">E-commerce Director</h5>
+                                    <small class="text-muted">Retail Industry</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,175 @@
+{% extends "base.html" %}
+
+{% block title %}Powering the Future, One Algorithm at a Time{% endblock %}
+
+{% block content %}
+    <!-- Hero Section with Particles Background -->
+    <section class="hero-section position-relative overflow-hidden text-white d-flex align-items-center">
+        <div id="particles-js" class="position-absolute w-100 h-100"></div>
+        <div class="container position-relative z-index-1 py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1 class="display-3 fw-bold mb-4">Transform Your Business with <span class="text-primary">AI Solutions</span></h1>
+                    <p class="lead mb-5">Bridging the gap between raw data and actionable intelligence with cutting-edge artificial intelligence and data analytics.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="{{ url_for('solutions_page') }}" class="btn btn-primary btn-lg px-4">Explore Solutions</a>
+                        <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg px-4">Get Started</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="AI Technology" class="img-fluid rounded-4 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Mission Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="fw-bold mb-4">Our Mission</h2>
+                    <p class="lead">At MAY Solutions, we transform complexity into clarity. We believe technology should empower, not overwhelm. Our team of AI experts, developers, and data scientists work hand-in-hand with businesses to unlock their full potential through cutting-edge AI integration, web development, and data analysis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">Our Core Services</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-box bg-primary-light mb-4">
+                                <i class="fas fa-brain fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title mb-3">AI Integration</h4>
+                            <p class="card-text">Harness the power of artificial intelligence to drive innovation and efficiency.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-box bg-primary-light mb-4">
+                                <i class="fas fa-chart-line fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Data Analysis</h4>
+                            <p class="card-text">Turn overwhelming data into clear, actionable business insights.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="icon-box bg-primary-light mb-4">
+                                <i class="fas fa-code fa-3x text-primary"></i>
+                            </div>
+                            <h4 class="card-title mb-3">Web Development</h4>
+                            <p class="card-text">Build scalable, intuitive digital solutions tailored to your needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Value Proposition Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <span class="badge bg-primary-light text-primary rounded-pill mb-3">Our Approach</span>
+                    <h2 class="fw-bold">Turning Complexity into <span class="text-primary">Competitive Advantage</span></h2>
+                    <p class="lead">We help businesses harness the power of AI and data analytics to drive innovation, efficiency, and growth.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm-hover">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-box-lg bg-primary-light mb-4 mx-auto">
+                                <i class="fas fa-brain fa-2x text-primary"></i>
+                            </div>
+                            <h4 class="mb-3">AI-Powered Insights</h4>
+                            <p class="mb-0">Transform raw data into actionable intelligence with our advanced machine learning models.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm-hover">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-box-lg bg-primary-light mb-4 mx-auto">
+                                <i class="fas fa-rocket fa-2x text-primary"></i>
+                            </div>
+                            <h4 class="mb-3">Rapid Implementation</h4>
+                            <p class="mb-0">Quick deployment of solutions that deliver immediate value to your business.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm-hover">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-box-lg bg-primary-light mb-4 mx-auto">
+                                <i class="fas fa-shield-alt fa-2x text-primary"></i>
+                            </div>
+                            <h4 class="mb-3">Enterprise Security</h4>
+                            <p class="mb-0">Robust security protocols to protect your sensitive data and intellectual property.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 border-0 shadow-sm-hover">
+                        <div class="card-body p-4 text-center">
+                            <div class="icon-box-lg bg-primary-light mb-4 mx-auto">
+                                <i class="fas fa-chart-network fa-2x text-primary"></i>
+                            </div>
+                            <h4 class="mb-3">Scalable Solutions</h4>
+                            <p class="mb-0">Future-proof architectures that grow with your business needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section with Image -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Data Analysis" class="img-fluid rounded-4 shadow">
+                </div>
+                <div class="col-lg-6">
+                    <span class="badge bg-primary-light text-primary rounded-pill mb-3">About Us</span>
+                    <h2 class="fw-bold mb-4">Your Partner in <span class="text-primary">Digital Transformation</span></h2>
+                    <p class="lead">At MAY Solutions, we combine technical expertise with business acumen to deliver solutions that drive real results.</p>
+                    <p>Our team of AI specialists, data scientists, and software engineers work collaboratively to solve complex challenges and unlock new opportunities for your business.</p>
+                    <div class="d-flex flex-wrap gap-3 mt-4">
+                        <a href="{{ url_for('projects_page') }}" class="btn btn-primary px-4">View Our Work</a>
+                        <a href="{{ url_for('contact') }}" class="btn btn-outline-primary px-4">Meet Our Team</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section  -->
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="fw-bold display-5 mb-4">Ready to Transform Your Business?</h2>
+                    <p class="lead mb-5">Let's discuss how MAY Solutions can help you harness the power of AI and data analytics.</p>
+                    <div class="d-flex flex-wrap gap-3 justify-content-center">
+                        <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg px-4">Get Started</a>
+                        <a href="{{ url_for('solutions_page') }}" class="btn btn-outline-light btn-lg px-4">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

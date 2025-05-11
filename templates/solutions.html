@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Our Solutions{% endblock %}
+
+{% block content %}
+    <!-- Page Header -->
+    <section class="page-header py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="fw-bold display-5">Our Solutions</h1>
+                    <p class="lead">MAY Solutions provides cutting-edge technology services to help businesses navigate the complexities of the digital landscape.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions List -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                {% for solution in solutions %}
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="icon-box bg-primary-light mb-4">
+                                <i class="fas fa-{{ 'brain' if loop.index == 1 else 'chart-line' if loop.index == 2 else 'code' if loop.index == 3 else 'cogs' if loop.index == 4 else 'magic' }} fa-2x text-primary"></i>
+                            </div>
+                            <h3 class="h4">{{ solution.title }}</h3>
+                            <p>{{ solution.description }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="fw-bold mb-4">Why Choose MAY Solutions?</h2>
+                    <p class="lead">We don't just build solutions—we build partnerships. Our team works closely with you to understand your unique challenges and deliver customized solutions that drive real results.</p>
+                    <p>From startups struggling to scale to enterprises buried under mountains of raw data, we help businesses of all sizes harness the power of AI and data analytics.</p>
+                    <a href="{{ url_for('contact') }}" class="btn btn-light mt-3">Get Started</a>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="AI Solutions" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}  
